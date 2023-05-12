@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+p {
+    color: rgb(67, 84, 113);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin: 40px auto;
+    border: 1px solid gainsboro;
+    font-size: 0px;
+}
+
+input {
+    width: 50px;
+    border: 1px solid gainsboro;
+}
+
+td,
+th {
+    border-bottom: 1px solid #bebebe;
+    text-align: left;
+    padding: 8px;
+    font-size: 16px;
+}
+
+th {
+    color: #fff;
+    background-color: rgb(52, 66, 88);
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.status {
+    border-radius: 15px;
+    background-color: rgb(91, 185, 154);
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.user {
+    margin-right: 5px;
+}
+
+.pen,
+.trash,
+.arrows {
+    display: inline-block;
+    /* vertical-align: auto; */
+    margin: 1px;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+.pen {
+    background-color: rgb(80, 172, 141);
+}
+
+.trash {
+    background-color: rgb(201, 6, 6);
+}
+
+.arrows {
+    background-color: rgb(113, 113, 113);
+}

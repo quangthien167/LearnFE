@@ -1,0 +1,16 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
