@@ -1,0 +1,41 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .box {
+        height: 300px;
+        width: 300px;
+        background-color: rgb(59, 52, 80);
+        margin: 30px auto;
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 300px;
+        position: relative;
+    }
+    
+    .box:before {
+        content: "";
+        background-color: red;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        top: 0;
+        left: 0;
+        margin: -15px;
+        z-index: -1;
+    }
+    
+    .box:after {
+        content: "";
+        background-color: yellow;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        bottom: 0;
+        right: 0;
+        margin: -15px;
+        z-index: -2;
+    }
