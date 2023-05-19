@@ -16,7 +16,7 @@ html{
 }
 .header__logo img{
     width: 172px;
-    height: 50px;
+    height: 29px;
 }
 .header__search{
     display: flex;
@@ -173,45 +173,411 @@ html{
 .pagi div > .pagi__circle:hover{
     background-color: #5a67d8;
 }
-.editor__pick{
-    /* background-color: #f8f9fa; */
+/* .editor__pick{
+    background-color: #f8f9fa;
     background-color: red;
     width: 100%;
     height: 970px;
-}
-.top__pick{
+}*/
+
+/* === Top Pick's of this month === */
+.top{
     background-color: #fff;
-    background-color: blue;
-    width: inherit;
-    height: 700px;
+    width: 100%;
+    height: 705px;
+    position: relative;
 }
+.top__r{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    height: 500px;
+}
+.top__h{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.top__box{
+    height: 500px;
+    margin-left: -30px;
+}
+.top__card{
+    margin-left: 30px;
+    width: 370px;
+    height: 450px;
+    float: left;
+}
+.top__card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.bg{
+    position: relative;
+}
+.top__card img{
+    width: 370px;
+    height: 450px;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+}
+.img__bg{
+    background-color: black;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 370px;
+    height: 450px;
+    border-radius: 10px;
+}
+.top__des{
+    /* margin-top: auto; */
+    width: 280px;
+    /* margin-bottom: 40px; */
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+.top__title{
+    color: #fff;
+    font-weight: 600;
+    /* height: 335px; */
+    font-size: 20px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.top__info{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+.top__info .top__avt img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #7d899c;
+}
+.top__user{
+    margin-left: 65px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 13px;
+}
+.top__time{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dbe6ef;
+}
+.top__name{
+    color: #dbe6ef;
+    font-size: 14px;
+}
+.top__acti{
+    margin-left: 20px;
+}
+
+/* ========= Fashion and style ========= */
 .fashion__style{
     background-color: #f8f9fa;
-    background-color: green;
-    width: inherit;
+    width: 100%;
     height: 720px;
+    position: relative;
 }
+
+.fashion__r{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    height: 500px;
+}
+.fashion__h{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+/* ========= Beauty ========= */
 .beauty{
     background-color: #f4f4f4;
     background-color: yellow;
     width: inherit;
     height: 765px;
 }
+
+/* === Trending === */
 .trending{
     background-color: #f8f9fa;
-    background-color: black;
     width: inherit;
     height: 780px;
+    padding: 0 50px;
+    position: relative;
 }
+.trending__r{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.trending__h{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-bottom: 28px;
+    font-size: 20px;
+}
+
+.trending__box{
+    height: 522px;
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+}
+.trending__box .trending__card{
+    width: 695px;
+    background-color: #fff;
+    height: inherit;
+    border-radius: 10px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+}
+.trending__card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.trending__img img{
+    height: 522px;
+    border-radius: 10px 0 0 10px;
+}
+.trending__des{
+    margin-left: 25px;
+}
+.trending__des .trending__btn{
+    background-color: #f7f7fd;
+    color: #5a67d8;
+    margin-top: 145px;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.trending__btn:hover{
+    background-color: #5a67d8;
+    color: #fff;
+}
+.trending__des .trending__title{
+    font-weight: bold;
+    color: #2d3748;
+    margin-top: 20px;
+}
+.trending__des > p{
+    margin-top: 30px;
+    color: #718096;
+    font-size: 13px;
+    padding-right: 50px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+}
+.info{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.info .info__avt img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.info__user{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 13px;
+}
+.time{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    color: #2d3748;
+    font-size: 14px;
+}
+.time > p{
+    color: #718096;
+}
+.acti{
+    margin-left: 20px;
+}
+
+/* === Subscribe === */
 .subscribe{
     background-color: #f4f4f4;
-    background-color: tomato;
     width: inherit;
     height: 560px;
+    position: relative;
+}
+.subscribe .subscribe__box{
+    background-color: #fff;
+    height: 365px;
+    width: 1170px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.subscribe__box > h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
+}
+.subscribe__box > p{
+    margin-top: 25px;
+    color: #718096;
+}
+.send-email{
+    margin-top: 55px;
+}
+.subscribe__box .send-email > input{
+    border: none;
+    background-color: #f4f4f4;
+    height: 52px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.subscribe__box .send-email > button{
+    color: #fff;
+    background-color: #5a67d8;
+    width: 150px;
+    height: 52px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.subscribe__box .send-email > button:hover{
+    background-color: #597ade;
 }
 .footer__background{
     background-color: #fff;
-    background-color: turquoise;
     width: inherit;
     height: 305px;
+    position: relative;
 }
+.footer__box{
+    width: 1170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.office{
+    display: flex;
+    flex-direction: column;
+}
+.office__logo{
+    margin-bottom: 27px;
+}
+.office__logo img{
+    width: 172px;
+    height: 29px;
+}
+.office > #all-rights{
+    margin-bottom: 20px;
+    color: #898096;
+}
+.office p > a{
+    color: #597fe4;
+    
+}
+.ff{
+    color: #2d3748;
+}
+.office .ff, .ff > a{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+.list{
+    display: flex;
+    margin-left: 50px;
+}
+.list__link{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
+.list__link > a{
+    color: #898096;
+    margin-bottom: 15px;
+}
+strong{
+    margin-bottom: 30px;
+    color: #2d3748;
+    font-family: 'Times New Roman', Times, serif;
+}
+.list__link a i{
+    display: inline-block;
+    font-size: 13px;
+}
+.list__link a p{
+    margin-left: 10px;
+    display: inline;
+}
+.scroll{
+    background-color: #5a67d8;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 20px;
+    margin-top: 200px;
+    position: relative;
+    cursor: pointer;
+}
+.scroll:hover{
+    background-color: #597ade;
+}
+.scroll > i{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
