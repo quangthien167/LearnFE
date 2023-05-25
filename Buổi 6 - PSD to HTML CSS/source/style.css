@@ -1,6 +1,12 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
 .header__background{
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
@@ -11,7 +17,8 @@ html{
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
+    /* overflow: hidden; */
+    /* left: 0; */
     z-index: 999;
 }
 .header__logo img{
@@ -55,6 +62,24 @@ html{
 .header__menu > ul > li a:hover{
     color: #597ade;
 }
+.h__m-992{
+    display: none;
+}
+
+.moon-992{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .moon-992{
+        margin-left: 235px;
+    }
+}
+@media screen and (max-width: 576px){
+    .moon-992{
+        margin-left: 283px;
+    }
+}
 .sidebar__background{
     background-color: #f4f4f4;
     height: 815px;
@@ -62,10 +87,22 @@ html{
     margin-top: 92px;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.sidebar__box{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 815px;
 }
 .cards{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 72px;
     margin-left: -30px;
 }
@@ -95,15 +132,16 @@ html{
 .sidebar{
     display: flex;
     justify-content: center;
-    /* margin: 80px 175px 0px 175px; */
-
+    position: relative;
+    width: 1170px;
 }
 .sidebar__des{
-    margin-top: 175px;
+    height: 272px;
+    margin-top: 172px;
     margin-right:45px;
-    width: 755px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .sidebar__des .sidebar__des-link{
     background-color: #ededf3;
@@ -122,43 +160,40 @@ html{
 }
 .title{
     margin-top: 35px;
-    margin-bottom: 45px;
 }
 .sidebar__des .title > h1{
     font-size: 45px;
     font-family: 'Times New Roman', Times, serif;
     color: #2d3748;
-    display: inline;
 }
 .sidebar__des > p{
     width: 755px;
     color: #718096;
     line-height: 1.5;
+    margin-top: 35px;
 
 }
 .sidebar__img{
-    width: 365px;
+    width: 370px;
     height: 460px;
     margin-top: 80px;
 }
 .sidebar__img > img{
-    width: 100%;
-    height: 100%;
+    width: 370px;
+    height: 460px;
     border-radius: 10px;
     flex-shrink: 0;
     object-fit: cover;
 }
-/* .sidebar__img > img{
-    display: block;
-    width: 100%;
-    
-}  */
 .pagi{
     display: flex;
     justify-content: flex-start;
+    position: absolute;
+    align-items: flex-end;
     margin-left: -16px;
-    margin-top: 75px;
-
+    margin-bottom: 10px;
+    bottom: 0;
+    left: 0;
 }
 .pagi > div{
     margin-left: 16px;
@@ -174,6 +209,70 @@ html{
     background-color: #5a67d8;
 }
 
+/* ======= Responsive 992 ======= */
+@media screen and (max-width: 992px){
+    .header__background{
+        height: 83px;
+    }
+    .header__search{
+        display: none;
+    }
+    .header__menu{
+        display: none;
+    }
+    .moon-992{
+        margin-left: 412px;
+        display: block;
+        color: #718096;
+        font-size: 23px;
+    }
+    .h__m-992{
+        margin-left: 12px;
+        display: flex;
+        background-color: #5a67d8;
+        width: 37px;
+        height: 33px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    .h__m-992 > i{
+        line-height: 33px;
+        font-size: 19px;
+    }
+    .sidebar__background{
+        margin-top: 83px;
+        height: 1277px;
+        width: 991px;
+    }
+    .sidebar__box{
+        margin-top: calc(71px - 24px);
+        width: 691px;
+    }
+    .cards{
+        flex-wrap: wrap;
+    }
+    .cards > a{
+        width: 330px;
+        height: 107px;
+        margin-top: 24px;
+    }
+    .sidebar__des{
+        margin-top: 80px;
+        flex-direction: column;
+    }
+    .title{
+        margin-bottom: 35px;
+    }
+    .sidebar__des > p{
+        width: 680px;
+    }
+    .sidebar__img{
+        width: 450px;
+        height: 560px;
+        margin-top: 28px;
+    }
+}
 /* === Editor Pick === */
 .editor__pick{
     background-color: #f8f9fa;
@@ -275,8 +374,6 @@ html{
     width: 370px;
 }
 .editor__card-left .editor__img img{
-    /* width: 370px;
-    height: 245px; */
     width: inherit;
     height: inherit;
     border-radius: 15px 15px 0 0;
@@ -358,10 +455,6 @@ html{
 .topic > a:first-child{
     margin-top: 30px;
 }
-/* .topic > a{
-    display: flex;
-    justify-content: flex-start;
-} */
 .topic > a{
     display: flex;
     justify-content: flex-start;
@@ -405,6 +498,7 @@ html{
     font-size: 13px;
 }
 
+
 /* === Top Pick's of this month === */
 .top{
     background-color: #fff;
@@ -438,10 +532,10 @@ html{
     height: 450px;
     float: left;
 }
-.top__card:hover{
+/* .top__card:hover{
     transform: scale(1.03);
     cursor: pointer;
-}
+} */
 .bg{
     position: relative;
 }
@@ -769,7 +863,8 @@ html{
 .beauty__acti{
     margin-left: 20px;
 }
-/* === Trending === */
+
+/* =========== Trending ============ */
 .trending{
     background-color: #f8f9fa;
     width: inherit;
@@ -778,6 +873,7 @@ html{
     position: relative;
 }
 .trending__r{
+    /* width: 1825px; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -889,7 +985,7 @@ html{
     margin-left: 20px;
 }
 
-/* === Subscribe === */
+/* =========== Subscribe ============ */
 .subscribe{
     background-color: #f4f4f4;
     width: inherit;
@@ -943,6 +1039,8 @@ html{
 .btn:hover{
     background-color: #597ade;
 }
+
+/* =========== Footer ============ */
 .footer__background{
     background-color: #fff;
     width: inherit;
@@ -1033,5 +1131,329 @@ strong{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/* ======= Responsive 1200 ======= */
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+    /* ========== Header ========== */
+    .h__m-992{
+        display: none;
+    }
+    .header__search{
+        margin-left: 60px;
+    }
+    .header__logo img{
+        height: 27px;
+    }
+    .header__search > i{
+        margin-left: 19px;
+    }
+    .header__search > input{
+        height: 45px;
+    }
+    .header__menu{
+        margin-left: 40px;
+    }
+    .moon-992{
+        display: none;
+    }
+    /* ========== Sidebar ========== */
+    .sidebar__background{
+        width: inherit;
+        height: 740px;
+        position: relative;
+    }
+    .sidebar__box{
+        width: 930px;
+        height: inherit;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .sidebar{
+        width: 930px;
+    }
+    .cards{
+        margin-top: 71px;
+    }
+    .cards > a{
+        width: 210px;
+        height: 107px;
+    }
+    .sidebar__des{
+        margin-top: 105px;
+        width: 585px;
+    }
+    .sidebar__des > p{
+        width: 585px;
+        margin-top: 45px;
+    }
+    
+    .sidebar__img{
+        width: 289px;
+        height: 360px;
+        margin-top: 105px;
+    }
+    .sidebar__img > img{
+        width: 289px;
+        height: 360px;
+    }
+    .pagi{
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+
+/* === Editor Pick === */
+    .editor__pick{
+        height: 955px;
+    }
+    .editor{
+        height: 740px;
+    }
+    .editor__r{
+        width: 930px;
+        height: 740px;
+    }
+    .editor__left{
+        width: 610px;
+        height: inherit;
+    }
+    .editor__cards-left{
+        margin-top: 25px;
+    }
+    .editor__card-left{
+        height: 580px;
+        width: 290px;
+    }
+    .editor__card--width{
+        height: 580px;
+    }
+    .editor__title{
+        margin-bottom: 25px;
+    }
+    .editor__img{
+        height: 195px;
+        width: 290px;
+    }
+    .editor__card-left .editor__img img{
+        height: 195px;
+        width: 290px;
+        border-radius: 15px 15px 0 0;
+    }
+    .aws__box{
+        width: 610px;
+        margin-top: 23px;
+    }
+    .topic > a{
+        width: 290px;
+    }
+    .o-s__img > img {
+        width: 290px;
+        height: 210px;
+    }
+
+    /* === Top Pick's of this month === */
+    .top{
+        height: 700px;
+        width: inherit;
+    }
+    .top__r{
+        width: 930px;
+    }
+    .top__card{
+        width: 290px;
+    }
+    .top__card img{
+        width: 290px;
+    }
+    .img__bg{
+        width: 290px;
+    }
+    .top__des{
+        width: 210px;
+    }
+    .top__title{
+        margin-left: 40px;
+        padding-left: 0px;
+        width: inherit;
+        margin-bottom: 25px;
+    }
+    .top__info{
+        width: 210px;
+        padding-left: 0px;
+        margin-left: 40px;
+        height: 60px;
+        margin-bottom: 40px;
+        margin-top: auto;
+        /* align-items: flex-start; */
+    }
+    .top__user{
+        margin-top: auto;
+        height: 60px;
+        
+    }
+    .top__acti{
+        margin-left: 15px;
+    }
+
+    /* ========= Fashion and style ========= */
+    .fashion__style{
+        width: inherit;
+        height: 710px;
+    }
+    .fashion__r{
+        width: 930px; 
+        height: 510px;  
+    }
+    .fashion__card{
+        width: 290px;
+        width: 435px;
+    }
+    .fashion__title{
+        -webkit-line-clamp: 3;
+    }
+    .fashion__img{
+        height: 190px;
+        width: 290px;
+    }
+    .fashion__info{
+        width: 215px;
+        padding-left: 0px;
+        margin-left: 25px;
+    }
+    .fashion__date{
+        width: 90px;
+    }
+    .fashion__acti{
+        margin-left: 10px;
+        width: 50px;
+    }
+
+    /* ========= Beauty ========= */
+    .beauty{
+        width: inherit;
+        height: 718px;
+    }
+    .beauty__r{
+        width: 930px;
+    }
+    .beauty__h{
+        font-size: 21px;
+    }
+    .beauty__card{
+        margin-bottom: 25px;
+        height: 210px;
+    }
+    .beauty__img > img{
+        width: 170px;
+        height: 210px;
+    }
+    .beauty__des{
+        justify-content: flex-start;
+    }
+    .beauty__title{
+        margin-top: 30px;
+        -webkit-line-clamp: 3;
+        font-size: 21px;
+    }
+    /* =========== Trending ============ */
+    .trending{
+        width: inherit;
+        padding: 0 45px;
+        height: 615px;
+    }
+    .trending__r{
+        width: 1100px;
+        height: 385px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+        margin-top: 105px;
+    }
+    .trending__box{
+        height: 335px;
+    }
+    .trending__box .trending__card{
+        width: 535px;
+    }
+    .trending__img{
+        height: 335px;
+        width: 253px;
+    }
+    .trending__img img{
+        height: 335px;
+        width: 253px;
+    }
+    .trending__des{
+        width: 285px;
+        margin-left: 0px;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .trending__des .trending__btn{
+        margin-top: 25px;
+    }
+    .trending__des .trending__title{
+        margin-top: 20px;
+    }
+    .trending__des > p{
+        padding-right: 25px;
+        margin-top: 25px;
+        font-size: 16px;
+        line-height: 1.65;
+    }
+    .info{
+        margin-right: 0px;
+        margin-top: auto;
+        margin-bottom: 25px;
+    }
+
+    /* =========== Subscribe ============ */
+    .subscribe{
+        width: inherit;
+        height: 555px;
+    }
+    .subscribe .subscribe__box{
+        width: 930px;
+    }
+    .subscribe__box > h3{
+        font-size: 20px;
+    }
+    .subscribe__box > p{
+        margin-top: 20px;
+    }
+    .send-email{
+        margin-top: 52px;
+    }
+
+    /* =========== Footer ============ */
+    .footer__background{
+        width: inherit;
+        height: 303px;;
+    }
+    .footer__box{
+        width: 930px;
+    }
+    .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .office__logo{
+        margin-bottom: 25px;
+    }
+    .list__link{
+        margin-left: 68px;
+    }
+    .scroll{
+        margin-top: 195px;
+    }
+}
+
 
 
