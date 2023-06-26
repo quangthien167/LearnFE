@@ -1,0 +1,17 @@
+*,*::after,*::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#cards{
+    margin: 30px auto;
+}
+
+.card{
+    width: 15%;
+    background-color: aquamarine;
+    float: left;
+    margin: 0 2.5%;
+    padding: 10px;
+}
