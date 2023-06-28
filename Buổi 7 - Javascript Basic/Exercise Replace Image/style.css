@@ -1,0 +1,30 @@
+*,*::after,*::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+h1{
+    margin-top: 20px;
+    color: red;
+    text-align: center;
+}
+
+#boxImg{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.img p {
+    margin-left: 20px;
+}
