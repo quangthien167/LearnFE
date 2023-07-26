@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#boxId{
+    width: 450px;
+    height: 300px;
+    border: 2px solid gray;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 40px;
+}
+.iput{
+    font-size: 17px;
+    color: rgb(65, 65, 65);
+    width: 300px;
+    height: 35px;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
